@@ -1,0 +1,24 @@
+; Configuracao de apontamentos do dominio fiap.com.br:
+;
+$TTL 24h ; Tempo padrao para todos os registros sem TTL
+@	IN	SOA	ns1.fiap.com.br.	helpdesk@fiap.com.br. (
+		2016110202 ; serial
+		8h ; refresh
+		1h ; retry
+		3d ; expire
+		3h ; negative cache ttl
+		)
+@		IN	NS	ns1.fiap.com.br.
+ns1		IN	A	192.168.56.3
+ns2		IN	A	192.168.56.4
+
+		IN	MX	10 mail
+mail		IN	A	192.168.56.6
+smtp		IN	CNAME	mail
+pop		IN	CNAME	mail
+
+openstack	IN	A	192.168.56.5
+ftp		IN	A	192.168.56.5
+gateway		IN	A	192.168.56.1
+pfsense		IN	A	192.168.56.2
+proxy		IN	CNAME	pfsense
