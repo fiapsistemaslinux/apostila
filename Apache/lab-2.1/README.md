@@ -1,4 +1,4 @@
-![alt tag](https://raw.githubusercontent.com/fiap2trc/services/apache/lab-2.1/lab-logo.png)
+![alt tag](https://github.com/fiap2trc/services/blob/master/Apache/lab-2.1/lab-logo.png)
 
 # Laboratório Pŕatico: Migração de um site para Azure
 
