@@ -4,6 +4,10 @@
 
 **Descrição:** Neste cenário faremos a migração do site criado em VM para ambiente Azure utiizando scp;
 
+**Pré-Requisitos:** Para execução deste laboratório será necessário a criação de uma VM estanciada na Azure ( Embora qualquer outro provider demande os mesmos procedimentos ), neste processo utilize como base o material de apoio da Microsoft de acordo com a documentação abaixo;
+
+* [Azure - Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/)
+
 ## 1 - Estabelecendo conexão com a instancia criada na azure
 
 Para execução de transferência via ssh é necessário um usuário válido, em nosso cenário por questões de segurança utilizaremos chaves RSA com criptografia assimétrica:
