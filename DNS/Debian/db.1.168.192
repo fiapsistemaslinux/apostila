@@ -2,7 +2,7 @@
 ;
 $TTL 24h ; Tempo padrao para todos os registros sem TTL
 @	IN	SOA	ns1.fiap.com.br.	helpdesk@fiap.com.br.	(
-		2016110203 ; serial
+		2017082901 ; serial
 		8h ; refresh
 		1h ; retry
 		3d ; expire
@@ -11,8 +11,8 @@ $TTL 24h ; Tempo padrao para todos os registros sem TTL
 
 @		IN	NS	ns1
 @		IN	NS	ns2
-ns1		IN	A	192.168.56.3
-ns2		IN	A	192.168.56.4
+ns1		IN	A	192.168.1.2
+ns2		IN	A	192.168.1.3
 
 1	IN	PTR	gateway.fiap.com.br.
-6	IN	PTR	mail.fiap.com.br.
+5	IN	PTR	mail.fiap.com.br.
