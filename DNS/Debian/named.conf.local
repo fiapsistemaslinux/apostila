@@ -10,13 +10,13 @@ zone "fiap.com.br" {
         type master;
         file "/var/cache/bind/db.fiap.com.br";
 	notify yes;
-        also-notify { 192.168.1.3; };
+        also-notify { 192.168.218.129; };
 };
 
 // Arquivo de configuração dos ponteiros reversos da zona
 
 zone "1.168.192.in-addr.arpa" {
         type master;
-        file "/var/cache/bind/db.1.168.192";
+        file "/var/cache/bind/db.218.168.192";
 	allow-query { any; }; 
 };
