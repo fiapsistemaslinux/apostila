@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+clear
 echo -e "Digite o endereço ip da VM, Por exemplo 192.168.218.128"
 read $MYNETHOST
 
