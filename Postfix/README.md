@@ -187,3 +187,98 @@ QUIT
 221 2.0.0 Bye
 Connection closed by foreign host.
 ```
+
+# Ativando POP e IMAP no servidor
+
+Conforme descrito no começo desse capítulo o POP é um dos protocolos utilizados pelo usuário para Download de mensagens do servidor para o computador local, em sua configuração padrão o POP opera na porta 110, sem criptografia e na  porta 995 com criptografia de dados
+
+Outro protocolo mais robusto e com a mesma finalidade é o IMAP, ele foi projetado para atender a uma demanda que até então não era suportada pelo POP o armazenamento de mensagens para acesso a partir de qualquer lugar e não para Download e remoção do servidor. O IMAP destaca-se pelas possibilidades de implementação utilizando TLS e consequentemente pela melhoria na camada de segurança, o protocolo trabalha utilizando a porta 993 para TLS e 143 para conexão sem criptografia.
+
+## Instalando o POP e o IMAP
+
+Para executar o processo de instalação de ambos os protocolos execute o comando abaixo:
+
+```sh
+# apt install courier-authdaemon courier-authlib courier-base courier-imap courier-pop -y
+```
+
+Em seguida edite o arquivo de configuração do Postfix e comente a linha abaixo:
+
+```sh
+vim /etc/postfix/main.cf 
+
+...
+# mailbox_command = procmail -a "$EXTENSION"
+...
+```
+
+Ao final do mesmo arquivo de configuração adicionar os seguintes parâmetros:
+
+```sh
+home_mailbox = Maildir/
+DEFAULT=$HOME/Maildir/
+MAILDIR=$HOME/Maildir/
+```
+
+Reinicie o Postifix para aplicar as novas configurações:
+
+```sh
+# systemctl restart postfix
+# systemctl status postfix
+```
+
+# Criando as caixas de entrada:
+
+Na configuração anterior redefinimos o padrão para caixa de entrada para a home de usuário, para testarmos esse modelo será necessário utilizar o maildirmake para criação da caixa de entrada, neste exemplo tanto para o root como para o usuário suporte:
+
+```sh
+# maildirmake /home/suporte/Maildir
+# maildirmake /home/suporte/Maildir/.Enviados
+# maildirmake /home/suporte/Maildir/.Rascunhos
+# maildirmake /home/suporte/Maildir/.Lixeira
+# maildirmake /home/suporte/Maildir/.Spam
+# chown -R suporte: /home/suporte
+```
+
+Para terminar a configuração, reinicie os serviços abaixo:
+
+```sh
+# systemctl restart courier-authdaemon
+# systemctl restart courier-imap
+# systemctl restart courier-pop
+# systemctl restart postfix
+```
+
+Para validar o processo verifique se as portas 110 e 443 foram abertas:
+
+```sh
+ss -ntpl | egrep "110|443"
+```
+
+## Testando o protocolo POP: 
+
+Faça um novo teste enviando mais um email para o usuário suporte e recuperando a mensagem via POP conforme squencia abaixo:
+
+
+Envie um email utilizando o mail -s:
+
+```sh
+# echo "Testtando o POP" | mail -s "Teste" suporte@fiap.com.br
+```
+
+Acesse a caixa postal no Postfix via POP
+
+```sh
+telnet mail.fiap.com.br 110
+```
+
+Utilize os comandos abaixo para recuperar a mensagem:
+
+```sh
+user suporte
+pass suporte
+retr 1
+quit
+```
+
+> Já os testes via IMAP faremos via MUA com Thunderbird ou implementando o RoundCube como solução de webmail;
