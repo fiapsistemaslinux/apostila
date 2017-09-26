@@ -2,23 +2,19 @@
 ;
 $TTL 24h ; Tempo padrao para todos os registros sem TTL
 @       IN      SOA     ns1.fiap.com.br.        helpdesk@fiap.com.br. (
-                2017082901 ; serial
+                2017102101 ; serial
                 8h ; refresh
                 1h ; retry
                 3d ; expire
                 3h ; negative cache ttl
                 )   
 @               IN      NS      ns1.fiap.com.br.
-ns1             IN      A       192.168.1.2
-ns2             IN      A       192.168.1.3
+ns1             IN      A       192.168.218.128
+ns2             IN      A       192.168.218.129
 
-                IN      MX      10 mail
-mail            IN      A       192.168.1.5
+@               IN      MX      10 mail
+mail            IN      A       192.168.218.128
 smtp            IN      CNAME   mail
 pop             IN      CNAME   mail
 
-intranet        IN      A       192.168.1.4
-ftp             IN      A       192.168.1.2
-gateway         IN      A       192.168.1.1
-pfsense         In      CNAME   gateway
-proxy           IN      CNAME   gateway
+gateway         IN      A       192.168.218.1
