@@ -6,6 +6,7 @@ read $MYNETHOST
 
 test $MYNETHOST || echo "Endereço ip da vm não encontrado"
 
+MYREVERSE=$(echo $MYNETHOST | awk -F'.' '{ print $4 }')
 GITDIR=/srv/services
 GITURL='https://github.com/fiap2trc/services'
 
@@ -38,6 +39,7 @@ cp -av $GITDIR/scripts/EMAIL/mailname /etc/mailname
 replace_strings () {
 rpl NETHOST $MYNETHOST /etc/bind/db.fiap.edu.br
 rpl NETHOST $MYNETHOST /etc/bind/db.218.168.192
+rpl REV $MYREVERSE /etc/bind/db.218.168.192
 rpl NETHOST $MYNETHOST /etc/postfix/main.cf
 }
 
