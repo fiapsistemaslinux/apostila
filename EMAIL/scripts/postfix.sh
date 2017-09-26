@@ -11,6 +11,8 @@ GITURL='https://github.com/fiap2trc/services'
 
 install_packages () {
 clear && echo "Reinstalando pacotes do Bind9 e do Postfix" && sleep 2
+debconf-set-selections <<< "postfix postfix/mailname string mail.fiap.edu.br"
+debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
 apt update
 apt remove --purge bind9 mysql-server-5.7 mysql-server
 apt install bind9 postfix procmail bsd-mailx telnet
