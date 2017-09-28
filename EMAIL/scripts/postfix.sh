@@ -12,19 +12,19 @@ echo -e "Qual a mascara de sub-rede? ( Valores suportados: /24 /16 ou /8 )"
 read MYNETMASK
 case $MYNETMASK in
  	/24)
-		export NETMASK="/24"
+		export MYNETWORK=$(echo $MYNETHOST | awk -F'.' '{ net=$1"."$2"."$3".0"; print net }')
 		export MYREVERSE=$(echo $MYNETHOST | awk -F'.' '{ ptr=$3"."$2"."$1; print ptr }')
 	   	export MYREVERSEFILE=$(echo $MYNETHOST | awk -F'.' '{ ptrfile="db."$3"."$2"."$1; print ptrfile }')
 		export MYREVERSEPTR=$(echo $MYNETHOST | awk -F'.' '{ print $4 }')
 	   	;;
  	/16)
-		export NETMASK="/16"
+		export MYNETWORK=$(echo $MYNETHOST | awk -F'.' '{ net=$1"."$2".0.0"; print net }')
 		export MYREVERSE=$(echo $MYNETHOST | awk -F'.' '{ ptr=$2"."$1; print ptr }')
 	   	export MYREVERSEFILE=$(echo $MYNETHOST | awk -F'.' '{ ptrfile="db."$2"."$1; print ptrfile }')
 		export MYREVERSEPTR=$(echo $MYNETHOST | awk -F'.' '{ rev=$4"."$3; print rev }')
 	   	;;
  	/8)
-	 	export NETMASK="/8"
+		export MYNETWORK=$(echo $MYNETHOST | awk -F'.' '{ net=$1".0.0.0"; print net }')
 		export MYREVERSE=$(echo $MYNETHOST | awk -F'.' '{ print $1 }')
 	   	export MYREVERSEFILE=$(echo $MYNETHOST | awk -F'.' '{ ptrfile="db."$1; print ptrfile }')
 		export MYREVERSEPTR=$(echo $MYNETHOST | awk -F'.' '{ rev=$4"."$3"."$2; print rev }')
@@ -36,7 +36,7 @@ esac
 
 MYGATEWAY=$(ip r | grep default | awk -F' ' '{ print $3 }')
 MYSERIAL=$(date +%Y%m%d01)
-
+MYNETADDR=$MYNETWORK$MYNETMASK
 GITDIR=/srv/services
 GITURL='https://github.com/fiap2trc/services'
 
@@ -60,7 +60,7 @@ echo "mail.fiap.edu.br" > /proc/sys/vm/hostname
 
 configure_services () {
 clear && echo "Copiando arquivos de DNS e do Postfix" && sleep 2
-git clone --progress $GITURL $GITDIR
+test -d $GITDIR || git clone --progress $GITURL $GITDIR
 cp -av $GITDIR/EMAIL/scripts/files/db.fiap.edu.br /etc/bind/
 cp -av $GITDIR/EMAIL/scripts/files/db.0.168.192 /etc/bind/$MYREVERSEFILE
 cp -av $GITDIR/EMAIL/scripts/files/named.conf.local /etc/bind/
@@ -78,6 +78,7 @@ rpl %NETHOST% $MYNETHOST /etc/bind/$MYREVERSEFILE
 rpl %DNSREV% $MYREVERSEPTR /etc/bind/$MYREVERSEFILE
 rpl %SERIAL% $MYSERIAL /etc/bind/$MYREVERSEFILE
 rpl %NETHOST% $MYNETHOST /etc/postfix/main.cf
+rpl %NETADDR% $MYNETADDR /etc/postfix/main.cf
 }
 
 change_dns () {
@@ -88,11 +89,21 @@ echo "nameserver 127.0.0.1" >> /etc/resolvconf/resolv.conf.d/head
 echo "search fiap.edu.br"   >> /etc/resolvconf/resolv.conf.d/head
 }
 
+
 restart_services () {
 systemctl enable bind9
 systemctl enable postfix
 systemctl restart bind9
 systemctl restart postfix
+}
+
+validate () {
+clear && echo "Testando a resolução de nomes para ponteiros de NS" && sleep 2
+dig -t NS fiap.edu.br +short && sleep 2
+clear && echo "Testando a resolução de nomes para ponteiros de IPV4" && sleep 2
+dig mail.fiap.edu.br +short && sleep 2
+clear && echo "Testando a resolução de nomes para ponteiros de MX" && sleep 2
+dig -t MX fiap.edu.br +short && sleep 2
 }
 
 install_packages
@@ -101,3 +112,4 @@ configure_services
 replace_strings
 change_dns
 restart_services
+validate
