@@ -2,7 +2,7 @@
 ;
 $TTL 24h ; Tempo padrao para todos os registros sem TTL
 @	IN	SOA	ns1.fiap.edu.br.	helpdesk@fiap.edu.br.	(
-		2017092101 ; serial
+		%SERIAL% ; serial
 		8h ; refresh
 		1h ; retry
 		3d ; expire
@@ -10,8 +10,6 @@ $TTL 24h ; Tempo padrao para todos os registros sem TTL
 		)
 
 @		IN	NS	ns1
-@		IN	NS	ns2
-ns1		IN	A	NETHOST
+ns1		IN	A	%NETHOST%
 
-1	IN	PTR	gateway.fiap.edu.br.
-REV	IN	PTR	mail.fiap.edu.br.
+%DNSREV%	IN	PTR	mail.fiap.edu.br.
