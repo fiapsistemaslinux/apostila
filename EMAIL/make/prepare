@@ -1,0 +1,159 @@
+#!/usr/bin/env python
+import os
+from jinja2 import Environment, FileSystemLoader
+
+def setnetworkinf ():
+    import netaddr as na
+    import netifaces as ni
+    import socket
+
+    # Setting Global Variables
+    global iface
+    global address
+    global rvptr
+    global rvnamefile
+    global nethost
+    global defaultgw
+    global network
+    global netmask
+    global cidr
+
+    iface = ni.gateways()['default'][ni.AF_INET][1]
+    # Define default interface based on gateway, keep in mind that
+    # this value is based in a environment where the default interface
+    # Is in the same network of the default gateway but its is not always true;
+
+    addrs = ni.ifaddresses(iface)
+
+    # Get default Gateway
+    gateways = ni.gateways()
+    defaultgw = gateways['default'][ni.AF_INET][0]
+
+    # Get ipv4 stuffs
+    ipinfo = addrs[socket.AF_INET][0]
+    address = ipinfo['addr']
+    netmask = ipinfo['netmask']
+
+    # Get network information
+    inet = na.IPNetwork('%s/%s' % (address, netmask))
+    cidr = na.IPAddress(netmask).netmask_bits()
+    network = inet.network
+    nethost = na.IPNetwork(address)
+
+    # Setting reverse DNS name and PTR
+    rvaddress = address.split('.')
+    rvptr = rvaddress[-1]
+    rvnamefile = rvaddress[-2]+'.'+rvaddress[-3]+'.'+rvaddress[-4]
+    return
+
+
+def setserialinf ():
+    global serial
+
+    import time
+    order = '01'
+    serial = (time.strftime("%Y%m%d"))+order
+    return
+
+def setdomaindns ():
+    global fqdn
+
+    import socket
+    fqdn = socket.getfqdn()
+
+PATH = os.path.dirname(os.path.abspath(__file__))
+FILESPATH = os.path.dirname(os.path.abspath(__file__))+'/files'
+TEMPLATE_ENVIRONMENT = Environment(
+    autoescape=False,
+    loader=FileSystemLoader(os.path.join(PATH, 'templates')),
+    trim_blocks=False)
+
+def files():
+    if not os.path.exists(FILESPATH):
+        os.makedirs(FILESPATH)
+
+def pause():
+    print 'Network info for DNS and Postfix Templates (based on %s):' % iface
+    print '-------------------------'
+    print ' domain:', fqdn
+    print 'address:', address
+    print 'netmask:', netmask
+    print 'network:', network
+    print '   cidr:', cidr
+    print 'gateway:', defaultgw
+    print '-------------------------'
+
+    programPause = raw_input("Press the <ENTER> key to create the tamplates based on this information...")
+    return
+
+def render_template(template_filename, context):
+    return TEMPLATE_ENVIRONMENT.get_template(template_filename).render(context)
+
+def create_binddb_file(fqdn, serial, address, defaultgw):
+    fname = os.path.join(FILESPATH,'db.'+fqdn)
+    context = {
+        'domain': fqdn,
+        'serial': serial,
+        'regmx': address,
+        'reggw': defaultgw
+    }
+    #
+    with open(fname, 'w') as f:
+        dbfile = render_template('db.file.j2', context)
+        f.write(dbfile)
+
+def create_bindrv_file(fqdn, serial, address, rvptr, rvnamefile):
+    fname = os.path.join(FILESPATH,'db.'+rvnamefile)
+    context = {
+        'rvaddr': rvptr,
+        'domain': fqdn,
+        'serial': serial,
+        'regmx': address,
+    }
+    #
+    with open(fname, 'w') as f:
+        bindrev = render_template('db.rv.j2', context)
+        f.write(bindrev)
+
+def create_bindcn_file(fqdn, serial, address, rvptr, rvnamefile):
+    fname = os.path.join(FILESPATH,'named.conf.local')
+    context = {
+        'rvfile': rvnamefile,
+        'dbfile': fqdn,
+        'domain': fqdn,
+    }
+    #
+    with open(fname, 'w') as f:
+        bindconf = render_template('named.conf.local.j2', context)
+        f.write(bindconf)
+
+def create_maincf_file(fqdn, serial, nethost, network, cidr):
+    fname = os.path.join(FILESPATH,'main.cf')
+    context = {
+        'domain': fqdn,
+        'serial': serial,
+        'nethost': nethost,
+        'network': network,
+        'cidr': cidr
+    }
+    #
+    with open(fname, 'w') as f:
+        maincf = render_template('main.cf.j2', context)
+        f.write(maincf)
+
+def main():
+    setdomaindns()
+    setserialinf()
+    setnetworkinf()
+    pause()
+    files()
+    create_bindcn_file(fqdn, serial, address, rvptr, rvnamefile)
+    create_binddb_file(fqdn, serial, address, defaultgw)
+    create_bindrv_file(fqdn, serial, address, rvptr, rvnamefile)
+    create_maincf_file(fqdn, serial, nethost, network, cidr)
+
+
+########################################
+
+if __name__ == "__main__":
+    main()

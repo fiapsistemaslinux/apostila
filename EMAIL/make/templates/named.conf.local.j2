@@ -1,0 +1,11 @@
+zone {{ domain }} {
+        type master;
+        file "/etc/bind/db.{{ dbfile }}";
+        notify yes;
+};
+
+zone "{{ reverse }}.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.{{ reverse }}";
+        allow-query { any; };
+};

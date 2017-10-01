@@ -1,0 +1,4 @@
+### latest versions for the following packages
+jinja2
+netifaces
+netaddr
