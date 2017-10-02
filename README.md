@@ -3,6 +3,8 @@ profhelder.pereira@fiap.com.br
 
 ---
 
+## Material de Apoio:
+
 Repositório para configuração de Serviços baseados em Linux como firewall iptables, DNS, DHCP, FTP e Postfix
 
 - [Apache](https://github.com/fiap2trc/services/tree/master/Apache);
@@ -16,7 +18,7 @@ Repositório para configuração de Serviços baseados em Linux como firewall ip
 
 ---
 
-## Material Base para Sistemas Linux:
+## Referências e bases para Sistemas Linux:
 
 Um dos melhores guias para começar a explorar Sistemas Linux, seu conteúdo aborta, comandos básicos, customização, Administração e Segurança de forma prática e objetiva, será utilizado como apostila base durante as aulas:
 
