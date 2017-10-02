@@ -14,8 +14,6 @@ profhelder.pereira@fiap.com.br
 - [1.7 Acesso Remoto](https://github.com/helcorin/fiapLinux/tree/master/content/SSH)
 - [1.8 Backup e compressão de Dados](https://github.com/helcorin/fiapLinux/tree/master/content/Backup)
 - [1.9 LVM](https://github.com/helcorin/fiapLinux/tree/master/content/LVM)
-
-
 - [2.1 Firewall Iptables](https://github.com/helcorin/fiapLinux/tree/master/content/Iptables)
 - [2.2 Bind9](https://github.com/helcorin/fiapLinux/tree/master/content/Bind9)
 - [2.3 DHCP](https://github.com/helcorin/fiapLinux/tree/master/content/DHCP)
