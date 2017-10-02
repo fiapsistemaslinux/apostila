@@ -4,7 +4,7 @@ Repositório para configuração de Serviços baseados em Linux como firewall ip
 - [Apache](https://github.com/fiap2trc/services/tree/master/Apache);
 - [Bind9](https://github.com/fiap2trc/services/tree/master/Bind9);
 - [Criptogtafia](https://github.com/fiap2trc/services/tree/master/Criptografia);
-- [DHCP](https://github.com/fiap2trc/services/tree/master/DHCP);
+- [DHCP](https://github.com/fiap2trc/services/tree/master/ISC-DHCP-Server);
 - [Firewall Iptables](https://github.com/fiap2trc/services/tree/master/Firewall-Iptables);
 - [LVM](https://github.com/fiap2trc/services/tree/master/LVM);
 - [Nginx](https://github.com/fiap2trc/services/tree/master/Nginx);
