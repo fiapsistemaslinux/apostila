@@ -138,13 +138,13 @@ echo "Teste de envio" | mail -s "Teste" suporte@$(hostname -d)
 **FROM:** Identificação do emissor da mensagem para o servidor rodando o MTA via protocolo SMTP o endereço do emissor entra como parâmetro entre os sinais "<" e ">"  como em nosso e exemplo:
 
 ```sh
-FROM: <foo@meudominio.com.br>
+FROM: <foo@fiap.edu.br>
 ```
 
 **RCPT TO:** Identificação do Destinatário para recebimento da mensagem, a exemplo do comando FROM a informação é inserida entre os sinais "<" e ">" como no modelo:
 
 ```sh
-RCPT TO: <root@meudominio.com.br>
+RCPT TO: <root@fiap.edu.br>
 ```
 
 **DATA:** Determina o início do processo de transferência da mensagem, a partir dessa instrução o conteúdo do e-mail em si poderá ser escrito, a finalização da mensagem será repreeentada por um ponto "." ( Ponto ).
@@ -167,18 +167,18 @@ root@hostname:~# telnet localhost 25
 Trying 127.0.0.1...
 Connected to localhost.
 Escape character is '^]'.
-220 Bem Vindo - meudominio.com.br
-HELO mail.meudominio.com.br
-250 mail.meudominio.com.br
-MAIL FROM: <root@meudominio.com.br>
+220 Bem Vindo - fiap.edu.br
+HELO mail.fiap.edu.br
+250 mail.fiap.edu.br
+MAIL FROM: <root@fiap.edu.br>
 250 2.1.0 Ok
-RCPT TO: <suporte@meudominio.com.br>
+RCPT TO: <suporte@fiap.edu.br>
 250 2.1.5 Ok
 DATA
 354 End data with <CR><LF>.<CR><LF>
-From: Nome do Remetente <root@meudominio.com.br>
+From: Nome do Remetente <root@fiap.edu.br>
 
-To: Nome do Destinatario <ubuntu@meudominio.com.br>
+To: Nome do Destinatario <ubuntu@fiap.edu.br>
 Subject: Teste de Comandos SMTP
 E-mail teste - Comandos SMTP
 .
@@ -252,7 +252,7 @@ Para terminar a configuração, reinicie os serviços abaixo:
 Para validar o processo verifique se as portas 110 e 443 foram abertas:
 
 ```sh
-ss -ntpl | egrep "110|443"
+ss -ntpl | egrep "110|143"
 ```
 
 ## Testando o protocolo POP: 
@@ -263,13 +263,13 @@ Faça um novo teste enviando mais um email para o usuário suporte e recuperando
 Envie um email utilizando o mail -s:
 
 ```sh
-# echo "Testtando o POP" | mail -s "Teste" suporte@fiap.com.br
+# echo "Testtando o POP" | mail -s "Teste" suporte@fiap.edu.br
 ```
 
 Acesse a caixa postal no Postfix via POP
 
 ```sh
-telnet mail.fiap.com.br 110
+telnet mail.fiap.edu.br 110
 ```
 
 Utilize os comandos abaixo para recuperar a mensagem:

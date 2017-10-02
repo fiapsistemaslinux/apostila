@@ -62,15 +62,18 @@ def setdomaindns ():
     fqdn = socket.getfqdn()
 
 PATH = os.path.dirname(os.path.abspath(__file__))
-FILESPATH = os.path.dirname(os.path.abspath(__file__))+'/files'
+DNSFILESPATH = os.path.dirname(os.path.abspath(__file__))+'/files/dns'
+POSTFIXFILESPATH = os.path.dirname(os.path.abspath(__file__))+'/files/postfix'
 TEMPLATE_ENVIRONMENT = Environment(
     autoescape=False,
     loader=FileSystemLoader(os.path.join(PATH, 'templates')),
     trim_blocks=False)
 
 def files():
-    if not os.path.exists(FILESPATH):
-        os.makedirs(FILESPATH)
+    if not os.path.exists(DNSFILESPATH):
+        os.makedirs(DNSFILESPATH)
+    if not os.path.exists(POSTFIXFILESPATH):
+        os.makedirs(POSTFIXFILESPATH)
 
 def pause():
     print 'Network info for DNS and Postfix Templates (based on %s):' % iface
@@ -90,7 +93,7 @@ def render_template(template_filename, context):
     return TEMPLATE_ENVIRONMENT.get_template(template_filename).render(context)
 
 def create_binddb_file(fqdn, serial, address, defaultgw):
-    fname = os.path.join(FILESPATH,'db.'+fqdn)
+    fname = os.path.join(DNSFILESPATH,'db.'+fqdn)
     context = {
         'domain': fqdn,
         'serial': serial,
@@ -103,7 +106,7 @@ def create_binddb_file(fqdn, serial, address, defaultgw):
         f.write(dbfile)
 
 def create_bindrv_file(fqdn, serial, address, rvptr, rvnamefile):
-    fname = os.path.join(FILESPATH,'db.'+rvnamefile)
+    fname = os.path.join(DNSFILESPATH,'db.'+rvnamefile)
     context = {
         'rvaddr': rvptr,
         'domain': fqdn,
@@ -116,7 +119,7 @@ def create_bindrv_file(fqdn, serial, address, rvptr, rvnamefile):
         f.write(bindrev)
 
 def create_bindcn_file(fqdn, serial, address, rvptr, rvnamefile):
-    fname = os.path.join(FILESPATH,'named.conf.local')
+    fname = os.path.join(DNSFILESPATH,'named.conf.local')
     context = {
         'rvfile': rvnamefile,
         'dbfile': fqdn,
@@ -128,7 +131,7 @@ def create_bindcn_file(fqdn, serial, address, rvptr, rvnamefile):
         f.write(bindconf)
 
 def create_maincf_file(fqdn, serial, nethost, network, cidr):
-    fname = os.path.join(FILESPATH,'main.cf')
+    fname = os.path.join(POSTFIXFILESPATH,'main.cf')
     context = {
         'domain': fqdn,
         'serial': serial,
