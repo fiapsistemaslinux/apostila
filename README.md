@@ -22,14 +22,7 @@ profhelder.pereira@fiap.com.br
 Um dos melhores guias para começar a explorar Sistemas Linux, seu conteúdo aborta, comandos básicos, customização, Administração e Segurança de forma prática e objetiva, será utilizado como apostila base durante as aulas:
 
 - [Guia Foca GNU/Linux](http://www.guiafoca.org/)
-
-
-Free ebook sobre o prompt de Comandos Linux:
-
 - [The Linux Command Line, By William Shotts](http://linuxcommand.org/tlcl.php)
-
-Curso base para iniciantes em sistemas Linux publicado no Cisco Networking Academy, verificar informações sobre acesso com o professor responsável pelo projeto na Fiap:
-
 - [Curso NDG Linux Essentials](https://www.netacad.com/pt/courses/ndg-linux-essentials/)
 
 
