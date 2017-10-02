@@ -4,14 +4,17 @@ profhelder.pereira@fiap.com.br
 # Soluçes em Redes para Sistemas Linux
 ---
 
+## Conteúdo:
+
 - [1.1 Introdução](https://github.com/helcorin/fiapLinux/tree/master/content/Intro)
 - [1.2 Environment](https://github.com/helcorin/fiapLinux/tree/master/content/Environment)
 - [1.4 Permisisonamento](https://github.com/helcorin/fiapLinux/tree/master/content/Permisisonamento)
-- [1.5 Instalando Pacotes](https://github.com/helcorin/fiapLinux/tree/master/content/Instalando Pacotes)
-- [1.6 Gerenciando Processos](https://github.com/helcorin/fiapLinux/tree/master/content/Gerenciando Processos)
+- [1.5 Instalando Pacotes](https://github.com/helcorin/fiapLinux/tree/master/content/Instalando%20Pacotes)
+- [1.6 Gerenciando Processos](https://github.com/helcorin/fiapLinux/tree/master/content/Gerenciando%20Processos)
 - [1.7 Acesso Remoto](https://github.com/helcorin/fiapLinux/tree/master/content/SSH)
-- [1.8 Backup (rsync, tar, gzip e bzip2)](https://github.com/helcorin/fiapLinux/tree/master/content/Backup)
+- [1.8 Backup e compressão de Dados](https://github.com/helcorin/fiapLinux/tree/master/content/Backup)
 - [1.9 LVM](https://github.com/helcorin/fiapLinux/tree/master/content/LVM)
+
 
 - [2.1 Firewall Iptables](https://github.com/helcorin/fiapLinux/tree/master/content/Iptables)
 - [2.2 Bind9](https://github.com/helcorin/fiapLinux/tree/master/content/Bind9)
