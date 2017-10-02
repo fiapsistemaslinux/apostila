@@ -4,8 +4,6 @@ profhelder.pereira@fiap.com.br
 # Soluçes em Redes para Sistemas Linux
 ---
 
-## Conteúdo:
-
 - [1.1 Introdução](https://github.com/helcorin/fiapLinux/tree/master/content/Intro)
 - [1.2 Environment](https://github.com/helcorin/fiapLinux/tree/master/content/Environment)
 - [1.4 Permisisonamento](https://github.com/helcorin/fiapLinux/tree/master/content/Permisisonamento)
