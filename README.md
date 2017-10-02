@@ -6,13 +6,13 @@ profhelder.pereira@fiap.com.br
 
 ### Sumário:
 
-- 2.1 [Firewall Iptables](https://github.com/fiap2trc/services/tree/master/Firewall-Iptables);
-- 2.2 [Bind9](https://github.com/fiap2trc/services/tree/master/Bind9);
-- 2.3 [DHCP](https://github.com/fiap2trc/services/tree/master/ISC-DHCP-Server);
-- 2.4 [Criptogtafia](https://github.com/fiap2trc/services/tree/master/Criptografia);
-- 2.5 [Nginx](https://github.com/fiap2trc/services/tree/master/Nginx);
-- 2.6 [Postfix](https://github.com/fiap2trc/services/tree/master/Postfix);
-- 2.7 [LVM](https://github.com/fiap2trc/services/tree/master/LVM);
+- 2.1 [Firewall Iptables](https://github.com/fiap2trc/services/tree/master/Firewall-Iptables)
+- 2.2 [Bind9](https://github.com/fiap2trc/services/tree/master/Bind9)
+- 2.3 [DHCP](https://github.com/fiap2trc/services/tree/master/ISC-DHCP-Server)
+- 2.4 [Criptogtafia](https://github.com/fiap2trc/services/tree/master/Criptografia)
+- 2.5 [Nginx](https://github.com/fiap2trc/services/tree/master/Nginx)
+- 2.6 [Postfix](https://github.com/fiap2trc/services/tree/master/Postfix)
+- 2.7 [LVM](https://github.com/fiap2trc/services/tree/master/LVM)
 
 
 ---
