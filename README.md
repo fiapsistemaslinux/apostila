@@ -6,13 +6,13 @@ profhelder.pereira@fiap.com.br
 
 ### Sumário:
 
-- [2.1 Firewall Iptables](https://github.com/helcorin/fiapLinux/content/tree/master/Firewall-Iptables)
-- [2.2 Bind9](https://github.com/helcorin/fiapLinux/content/tree/master/Bind9)
-- [2.3 DHCP](https://github.com/helcorin/fiapLinux/content/tree/master/ISC-DHCP-Server)
-- [2.4 Criptogtafia](https://github.com/helcorin/fiapLinux/content/tree/master/Criptografia)
-- [2.5 Nginx](https://github.com/helcorin/fiapLinux/content/tree/master/Nginx)
-- [2.6 Postfix](https://github.com/helcorin/fiapLinux/content/tree/master/Postfix)
-- [2.7 LVM](https://github.com/helcorin/fiapLinux/content/tree/master/LVM)
+- [2.1 Firewall Iptables](https://github.com/helcorin/fiapLinux/tree/master/Firewall-Iptables)
+- [2.2 Bind9](https://github.com/helcorin/fiapLinux/tree/master/Bind9)
+- [2.3 DHCP](https://github.com/helcorin/fiapLinux/tree/master/DHCP)
+- [2.4 Criptogtafia](https://github.com/helcorin/fiapLinux/tree/master/Criptografia)
+- [2.5 Nginx](https://github.com/helcorin/fiapLinux/tree/master/Nginx)
+- [2.6 Postfix](https://github.com/helcorin/fiapLinux/tree/master/Postfix)
+- [2.7 LVM](https://github.com/helcorin/fiapLinux/tree/master/LVM)
 
 
 ---
