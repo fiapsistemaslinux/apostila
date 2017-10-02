@@ -2,7 +2,7 @@
 profhelder.pereira@fiap.com.br
 
 ---
-# iptables
+# Iptables
 
 ## Conceitos importantes:
 
@@ -34,6 +34,8 @@ Para revisar quais portas são relacionadas a quais serviços verifique o arquiv
 ```sh
 # cat /etc/services
 ```
+
+---
 
 ## Começando pelas Tabelas
 
@@ -74,7 +76,7 @@ Conjunto de regras utilizadas para filtro de pacotes, sendo a tabela detentora d
 - **OUTPUT:** Tratamento de tudo que sai pelo kernel;
 - **FORWARD:** Tratamento de pacotes que chegam ao kernel  mas devem ser redirecionados a outro kernel ou a outra interface de rede dentro do mesmo kernel;
 
-###Tabela NAT:###
+### Tabela NAT:
 
 Na tabela NAT temos o conjunto de regras cuja função é executar o NAT (Network Address Translation) sobre os pacotes que passam pelo kernel.
 
@@ -86,7 +88,7 @@ Na tabela NAT temos o conjunto de regras cuja função é executar o NAT (Networ
 - **OUTPUT:** Tratamento de pacotes que serão emitidos pelo kernel;
 - **POSTROUTING:** Natuaralmente utilizada quando necessário a alteração de pacotes após seu roteamento;
 
-### Tabela MANGLE:###
+### Tabela MANGLE:
 
 Finalmente na mangle encontraremos regras específicas para funções complexas de tratamento de pacotes, por exemplo, aplicação de TOS.
 
@@ -105,6 +107,8 @@ Durante nossos testes existem situações em que é mais prático visualizar ape
 # iptables -t filter -L INPUT
 # iptables -t nat -L  PREROUTING
 ```
+
+---
 
 ## Politica de firewall
 
