@@ -43,12 +43,6 @@ Se o que te falta são contas gratuitas para testes com modelos mais avançados,
  - [Qwilabs para execução hands on usando AWS e Google Cloud](https://qwiklabs.com/?locale=pt_BR);
  - [Plataforma para uso de recursos basicos do Openstack](http://trystack.org/);
 
-
-![alt tag](https://raw.githubusercontent.com/wiki/fiap2trc/Linux/images/linux_penguin.gif)
-
-Wiki com documentação e detalhamento técnico do conteúdo utilizado nas aulas de Soluções em Redes para ambientes Linux, conteúdo deste repositório é composto por documentação, configurações especificas para ferramentas e recursos do sistema;
-
-
 ----
 
 **Free Software, Hell Yeah!**
