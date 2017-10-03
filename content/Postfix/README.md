@@ -1,4 +1,5 @@
-![alt tag](https://raw.githubusercontent.com/wiki/fiap2trc/services/images/postfix-logo.png)
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/Postfix-logo.png)
+Postfix-logo.png; Public Domain; Fonte: [https://commons.wikimedia.org/wiki/File:Postfix-logo.png](https://commons.wikimedia.org/wiki/File:Postfix-logo.png)
 
 # Postfix
 

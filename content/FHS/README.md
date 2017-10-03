@@ -8,7 +8,7 @@ Sistemas Linux possuem uma organização que define qual a composição de diret
 A imagem abaixo é uma representação da FHS com uma descrição sucinta de cada diretório:
 
 
-![alt tag](https://raw.githubusercontent.com/wiki/fiapLinux/images/Standard-unix-filesystem-hierarchy.png)
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/Standard-unix-filesystem-hierarchy.png)
 *Imagem fornecida por Paul Gardner, professor na Universidade de Canterbury.*
 
 ---
