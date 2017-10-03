@@ -284,3 +284,16 @@ quit
 ```
 
 > Já os testes via IMAP faremos via MUA com Thunderbird ou implementando o RoundCube como solução de webmail;
+
+--- 
+
+
+## Material de Referência sobre SSH:
+
+Material de referência publicado por [Gabriel Araujo](http://blog.4linux.com.br/author/gabriel-araujo/) no Blog da 4Linux sobre configuração de Relay de email:
+
+- [Faça relay com Postfix e adicione HA em seus projetos](http://blog.4linux.com.br/2017/06/postfix-relay/)
+
+---
+
+**Free Software, Hell Yeah!**
