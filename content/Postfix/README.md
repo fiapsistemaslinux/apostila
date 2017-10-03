@@ -288,7 +288,7 @@ quit
 --- 
 
 
-## Material de Referência sobre SSH:
+## Material de Referência:
 
 Material de referência publicado por [Gabriel Araujo](http://blog.4linux.com.br/author/gabriel-araujo/) no Blog da 4Linux sobre configuração de Relay de email:
 
