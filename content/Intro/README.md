@@ -38,7 +38,7 @@ Justamente porque se você não se identifica com nenhuma delas, você é livre 
 
 Atualmente existem centenas de distribuições, algumas mais famosas que outras. Em sua maioria, as distribuições são mantidas por grandes comunidades de colaboradores, entretanto, há outras que são mantidas por empresas. Dessa forma, podemos dividir as distros em duas categorias básicas: Livres ou Corporativas.
 
-## Distribuições Livres X Coorporativas:
+## Distribuições Livres:
 
 As Distribuições Linux em geral são classificadas como livres quando mantidas por comunidades de colaboradores sem fins lucrativos, ou seja, grupos de pessoas adeptas a filosofia do software livre, e que objetivam disponibilizar um sistema bom para os usuários e compartilhar conhecimento;
 
@@ -51,6 +51,8 @@ São exemplos de distribuições livres:
 - [Centos](https://www.centos.org)
 - [Alpine](https://www.alpinelinux.org/)
 - [ArchLinux](https://www.archlinux.org/)
+
+## Distribuiçes Coorporativas:
 
 Já as distribuições Coorporativas são mantidas por empresas que criam e controlam as versões obtendo o seu lucro através da venda de suporte ao seu sistema já que respeitando as liberdades criadas pela FSF **não é possível vender as distros**; 
 
@@ -114,49 +116,6 @@ Para inicio de estudos  esta informação é muito importante uma vez que, cada 
 ***Super usuário:***: Popularmente conhecido como "root",  usuário "root" é o administrador do sistema, e seu diretório (pasta) padrão é o "/root", diferente dos demais usuários que possuem sua pasta padrão no diretório /home.
 
 O "Shell" de um usuário "root" se diferencia do "Shell" de um usuário comum, pois antes do cursor, ele é identificado com "#" ( jogo-da-velha ).
-
----
-
-## Comandos básicos:
- 
-Para listar diretórios utilizamos o comando ls:
-
-```sh
-# ls
-# ls /var/log
-```
-
-Utilize o ls para visualizar a exitência da pasta de logs do sistema:
-
-```sh
-# ls /var
-```
-
-Feito isso acesse a pasta utilizando o comando cd:
-
-```sh
-# cd /var/log
-# pwd
-# ls
-```
-
-Aproveite para dar uma fuçada na pasta e procurar um log especifico como por exemplo o log de acesso do servidor, no Ubuntu deverá ser um arquivo chamado auth.log
-
-```sh
-# ls -lR 
-# cat auth.log
-```
-
-Volte a raiz do sistema para explorar outras opções, por exemplo, utilize um comando de busca para localizar outro arquivo de logs o lastlog;
-
-```sh
-# cd
-# pwd
-# find /var -name lastlog
-# cat /var/log/lastlog.log
-```
-
-> O comando cd sem nenhum parâmetro, a partir da raiz você pode utilizar o comando cat para dar uma olhada no arquivo encotrado, neste caso passando o caminho absoluto do arquivo, chamamos esse caminho comumente de PATH;
 
 ---
 
