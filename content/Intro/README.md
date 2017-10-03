@@ -1,4 +1,4 @@
-# Conceitos sobre Opensource:
+# Uma Introdução a filosofia opensource:
 
 ***Porque Software Livre?***
 
@@ -64,7 +64,7 @@ Citando alguns exemplos:
 
 > Vale ressaltar que o produto vendido pelas empresas que comercializam sistemas GNU/Linux, é na verdade, os serviços relacionados ao sistema operacional, como suporte técnico, garantias e treinamentos, ou seja, a “expertise” do sistema. Tecnicamente, não há produto algum sendo vendido, apenas os serviços relacionados aos softwares agregados na distribuição;
 
-## Distribuições "from scratch"  X Provenientes:
+## Distribuições Provenientes:
 
 Outra maneira interessante de classificação de distros relaciona-se a maneira como são criadas, distribuições linux podem ser desenvolvidas do zero, ou seja, utilizando como base  apenas um kernel Linux e alguma base de programas GNU, nesse método a vantagem é o maior nível de customização e o desenvolvimento voltada para demandas especificas, Como exemplos deste formato temos as distros Debian, RedHat, Gentoo e Slackware.
 
@@ -72,11 +72,9 @@ Já as chamadas distros provenientes aproveitam ferramentas e bases já desenvol
 
 ## Qual versão de sistema Linux utilizar?
 
-Pergunte a um administrador de sistemas qual a melhor versão de Linux a ser utilizada para a construção de um servidor de aplicação e você obterá uma resposta, encontre outros nove administradores, faça a mesma pergunta e pode ser que obtenha outras 9 respostas diferentes; Existem centenas de versões de Linux em uso no mundo uma caracteristica natural do formato OpenSource discursido acima, Para começar você pode ter uma noção melhor da quantidade de distros disponíveis através do [Distrowatch](https://distrowatch.com), funciona como uma espécie de catálogo relacionando projetos Linux Ativos.
+Pergunte a um administrador de sistemas qual a melhor versão de Linux a ser utilizada para a construção de um servidor de aplicação e você obterá uma resposta, encontre outros nove administradores, faça a mesma pergunta e pode ser que obtenha outras 9 respostas diferentes; Existem centenas de versões de Linux em uso no mundo uma caracteristica natural do formato OpenSource discursido acima, Para começar você pode ter uma noção melhor da quantidade de distros disponíveis através do [Distrowatch](https://distrowatch.com), funciona como uma espécie de catálogo relacionando projetos Linux Ativos. 
 
-### Disclaimer: 
-
-Durante o curso utilizaremos basicamente três plataformas: [Ubuntu](https://www.ubuntu.com/download) versão 16.04  (uma das mais utilizadas distribuições em relação a servidores de aplicação), [CentOS](https://www.centos.org/download/) em sua sétima versão, uma solução cuja arquitetura reflete perfeitamente um sistema Red Hat, O próprio sistema Red Hat quando tratarmos do matrial proposto pela pela [Red Hat](https://access.redhat.com/downloads) enterprise (http://br.redhat.com/).
+> Dentro desse material utilizaremos basicamente três plataformas: [Ubuntu](https://www.ubuntu.com/download) versão 16.04, [CentOS](https://www.centos.org/download/) em sua sétima versão, uma solução cuja arquitetura reflete perfeitamente um sistema Red Hat.
 
 ---
 
@@ -160,6 +158,7 @@ Volte a raiz do sistema para explorar outras opções, por exemplo, utilize um c
 
 > O comando cd sem nenhum parâmetro, a partir da raiz você pode utilizar o comando cat para dar uma olhada no arquivo encotrado, neste caso passando o caminho absoluto do arquivo, chamamos esse caminho comumente de PATH;
 
+---
 
 ## Material de Referência e Recomendações:
 
@@ -168,17 +167,6 @@ Documentário da TV Finlandesa de 2001 sobre o Sistema Operacional GNU/Linux:
 
 Entrevista do Richard Stellman ao Tecmundo: 
  - [Tecmundo: "Conversamos com Richard Stallman"](https://www.tecmundo.com.br/software-livre/34146-conversamos-com-richard-stallman-o-guru-do-software-livre.htm);
-
-Guia de comandos, customização, administração e segurança Linux, totalmente prático e objetivo:
-- [Guia Foca GNU/Linux](http://www.guiafoca.org/)
-
-
-Free ebook sobre o prompt de Comandos Linux:
-- [The Linux Command Line, By William Shotts](http://linuxcommand.org/tlcl.php)
-
-
-Curso base para iniciantes em sistemas Linux publicado no Cisco Networking Academy:
-- [Curso NDG Linux Essentials](https://www.netacad.com/pt/courses/ndg-linux-essentials/)
 
 ----
 
