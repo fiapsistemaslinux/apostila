@@ -102,23 +102,6 @@ Sistemas Linux possuem uma organização que define qual a composição de diret
 
 ---
 
-## Command Line, Primeiros Passos:
-
-Embora vagamente parecidos, do ponto de vista de arquitetura existem grandes diferenças entre um terminal Linux e o prompt de comandos do DOS, sistemas Linux utilizam o interpretador de comandos para fornecer um ambiente para execução de tarefas, esse ambiente é responsável por assimilar os comandos enviados ao sistema e traduizir isso em “linguagem de máquina” para o sistema operacional esse interpretador de comandos carrega o nome de SHELL.
-
-
-### Níveis de usuários:
-
-Para inicio de estudos  esta informação é muito importante uma vez que, cada tipo de usuário possui suas limitações existindo duas possibilidades:
-
-***Usuário comum:***: Qualquer usuário do sistema que não seja o administrador do sistema, ( Geralmente identificado como "root" ) ou que não tenha poderes administrativos concedidos, na maioria dos interpretadores de comandos o padrão é que a "Shell" de um usuário comum seja identificado com "$" cifrão;
-
-***Super usuário:***: Popularmente conhecido como "root",  usuário "root" é o administrador do sistema, e seu diretório (pasta) padrão é o "/root", diferente dos demais usuários que possuem sua pasta padrão no diretório /home.
-
-O "Shell" de um usuário "root" se diferencia do "Shell" de um usuário comum, pois antes do cursor, ele é identificado com "#" ( jogo-da-velha ).
-
----
-
 ## Material de Referência e Recomendações:
 
 Documentário da TV Finlandesa de 2001 sobre o Sistema Operacional GNU/Linux:
