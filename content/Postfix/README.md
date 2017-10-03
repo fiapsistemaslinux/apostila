@@ -44,9 +44,6 @@ Internet Message Access Protocol - O IMAP também é um protocolo de correio ele
 
 ---
 
-![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/Postfix-logo.png)
-Fonte: [https://commons.wikimedia.org/wiki/File:Postfix_mailserver_flags_by_mimooh.svg](https://commons.wikimedia.org/wiki/File:Postfix_mailserver_flags_by_mimooh.svg);
-
 ## Instalando e Configurando o Postfix
 
 Para começar executaremos a instalação do Postfix na vm/instancia dedicada para esta aula:
