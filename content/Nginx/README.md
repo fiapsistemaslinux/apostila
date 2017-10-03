@@ -2,7 +2,7 @@
 profhelder.pereira@fiap.com.br
 
 ---
-![alt tag](https://raw.githubusercontent.com/2TINR/nginx/master/.img/nginx-logo.png)
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/nginx-desc.png)
 
 # Introdução ao NGINX
 

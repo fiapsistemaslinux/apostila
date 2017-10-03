@@ -1,3 +1,7 @@
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/cripto-desc.png)
+
+---
+
 Avançando um pouco a partir dos princípios básicos de uma conexao HTTP temos a parte da critografia no tráfego de dados, isto é, a implementação e exploração do protocolo HTTPS e sua importância para internet atual.
 
 ## HTTPS

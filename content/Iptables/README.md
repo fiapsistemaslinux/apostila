@@ -2,7 +2,7 @@
 profhelder.pereira@fiap.com.br
 
 ---
-# Iptables
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/iptables-desc.png)
 
 ## Conceitos importantes:
 

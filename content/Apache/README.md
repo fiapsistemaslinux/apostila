@@ -1,4 +1,4 @@
-![alt tag](https://raw.githubusercontent.com/wiki/fiap2trc/services/images/apache-logo.jpg)
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/apache-desc.png)
 
 O projeto Apache é um esforço comunitário de desenvolvedores cujo objetivo é prover um servidor web de código fonte aberto, estável e seguro. Sua origem está em um projeto da NSCA (Nacional Center of Supercomputing Aplications) criado pelo desenvolvedor de softwares e arquiteto de aplicações Robert M. McCool. O projeto inicial foi retomado por desenvolvedores dando origem a Fundação Apache (Apache Foudation).
 

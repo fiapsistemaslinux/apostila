@@ -1,4 +1,4 @@
-![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/Postfix_logo.png)
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/postfix-desc.png)
 
 # Postfix
 
@@ -42,6 +42,9 @@ Post Office Protocol - O POP é um dos protocolos responsáveis pelo processo de
 Internet Message Access Protocol - O IMAP também é um protocolo de correio eletrônico utilizado para transferência e armazenamento porém atuando com algumas características que o tornam superior ao POP nos aspectos de segurança e gerenciamento, o IMAP nativamente já permite o armazenamento de mensagens sem que sejam baixadas para o navegador, apresentando o cabeçalho dessas mensagens aos clientes até que seja solicitado o download;
 
 ---
+
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/Postfix-logo.png)
+Fonte: [https://commons.wikimedia.org/wiki/File:Postfix_mailserver_flags_by_mimooh.svg](https://commons.wikimedia.org/wiki/File:Postfix_mailserver_flags_by_mimooh.svg);
 
 ## Instalando e Configurando o Postfix
 

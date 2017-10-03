@@ -1,4 +1,4 @@
-![alt tag](https://raw.githubusercontent.com/wiki/fiap2trc/services/images/Bind.png)
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/bind-desc.png)
 
 
 ---
