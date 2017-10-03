@@ -1,8 +1,9 @@
 ##### Fiap - Soluções em Redes para ambientes Linux
 profhelder.pereira@fiap.com.br
 
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/lvm-desc.png)
+
 ---
-# LVM, conceito e configuração de volumes
 
 ## O que é LVM?
 

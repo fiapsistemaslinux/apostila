@@ -1,4 +1,6 @@
-# Gerenciando Processos
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/processos-desc.png)
+
+---
 
 O trecho abaixo contém uma boa definição sobre processos, retirado do material de estudos utilizado pelo Professor Romildo Martins Bezerra, ( verifique a bibliografia desta aula ).
 

@@ -1,3 +1,7 @@
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/perm-desc.png)
+
+---
+
 # Permissões Especias, Umask e Sudo:
 
 Para esta aula três pontos importantes serão avaliados:

@@ -1,4 +1,6 @@
-[[images/rsync.png]]
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/backup-desc.png)
+
+---
 
 ## Sintronizando pastas com RSYNC
 

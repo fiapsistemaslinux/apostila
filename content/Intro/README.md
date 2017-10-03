@@ -1,3 +1,7 @@
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/intro-desc.png)
+
+---
+
 # Uma Introdução a filosofia opensource:
 
 ***Porque Software Livre?***

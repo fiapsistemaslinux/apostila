@@ -1,6 +1,8 @@
 
 ![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/dhcp-desc.png)
 
+---
+
 O DHCP ou 'Dynamic Host Configuration Protocol' é um protocolo de rede usado para atribuir endereços IP e fornecer informações sobre a configuração de dispositivos de rede tais como servidores, desktops ou dispositivos móveis, para que ele possam se comunicar em uma rede usando outros protocolos. O ISC DHCP é um conjunto de software que implementa todos os aspectos da suíte DHCP incluindo os seguintes itens:
 
  - Um cliente DHCP, que pode ser fornecido com o sistema operacional de um host ou outro dispositivo capaz de enviar requisições de configuração para o servidor. A maioria dos dispositivos e sistemas operacionais já têm clientes DHCP incluído, na maioria das implementações de Linux este cliente é o DHCLIENT.

@@ -1,4 +1,6 @@
-[[images/packages-01.png]]
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/pacotes-desc.png)
+
+---
 
 ## Package Managers ( Gerenciadores de Pacotes ):
 

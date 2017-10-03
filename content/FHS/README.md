@@ -1,7 +1,8 @@
-
-# Estrutura base de um sistema Linux
+![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/fhs-desc.png)
 
 ---
+
+# Estrutura base de um sistema Linux
 
 Sistemas Linux possuem uma organização que define qual a composição de diretórios de da estrutura base de uma distribuição bem como qual a nomenclatura correta para estes diretórios, este sistema é chamado de FHS “File Hierarchy Standard” a estrutura proposta garante questões essenciais a evolução do sistema como por exemplo a compatibilidade entre diferentes plataformas, a estrutura FHS possui os seguintes diretórios:
 

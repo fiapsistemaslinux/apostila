@@ -1,6 +1,5 @@
 ![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/bind-desc.png)
 
-
 ---
 
 # Configurando DNS com bind9
