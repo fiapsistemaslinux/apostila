@@ -4,7 +4,8 @@ profhelder.pereira@fiap.com.br
 # Soluçes em Redes para Sistemas Linux
 ---
 
-- [1.1 Introdução](https://github.com/helcorin/fiapLinux/tree/master/content/Intro)
+- [1.0 Introdução](https://github.com/helcorin/fiapLinux/tree/master/content/Intro)
+- [1.1 File Hierarchy Standard](https://github.com/helcorin/fiapLinux/tree/master/content/FHS)
 - [1.2 Environment](https://github.com/helcorin/fiapLinux/tree/master/content/Environment)
 - [1.4 Permisisonamento](https://github.com/helcorin/fiapLinux/tree/master/content/Permisisonamento)
 - [1.5 Instalando Pacotes](https://github.com/helcorin/fiapLinux/tree/master/content/Instalando%20Pacotes)
