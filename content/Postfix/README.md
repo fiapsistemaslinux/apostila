@@ -189,7 +189,7 @@ QUIT
 Connection closed by foreign host.
 ```
 
-# Ativando POP e IMAP no servidor
+## Ativando POP e IMAP no servidor
 
 Conforme descrito no começo desse capítulo o POP é um dos protocolos utilizados pelo usuário para Download de mensagens do servidor para o computador local, em sua configuração padrão o POP opera na porta 110, sem criptografia e na  porta 995 com criptografia de dados
 
@@ -228,7 +228,7 @@ Reinicie o Postifix para aplicar as novas configurações:
 # systemctl status postfix
 ```
 
-# Criando as caixas de entrada:
+## Criando as caixas de entrada:
 
 Na configuração anterior redefinimos o padrão para caixa de entrada para a home de usuário, para testarmos esse modelo será necessário utilizar o maildirmake para criação da caixa de entrada, neste exemplo tanto para o root como para o usuário suporte:
 
