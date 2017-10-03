@@ -1,8 +1,11 @@
+##### Fiap - Soluções em Redes para ambientes Linux
+profhelder.pereira@fiap.com.br
+
 ![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/shell-desc.png)
 
 ---
 
-# Command Environment:
+## Apresentando o terminal de Comandos:
 
 O terminal de comandos Linux é responsável por interpretar tarefas e traduzi-las em chamadas de sistema, para isso ele utiliza um interpretador de comandos, chamamos esse interpretador de SHELL, o conceito de Shell é bem antigo, M. Tim Jones descreve o uso das primeiras Shells de comandos em sistemas Unix no começo da década de 70; Apesar de tanto o Windows como o GNU/Linux possuirem essa mesma base como herança do  Unix, as Shells se popularizaram mais fortemente na estrutura Linux, todo sistema GNU/Linux possui uma Shell, na verdade a maioria deles possuem mais de uma, são exemplos de Shell Linux:
 

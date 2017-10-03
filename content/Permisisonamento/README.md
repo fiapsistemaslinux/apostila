@@ -1,20 +1,9 @@
+##### Fiap - Soluções em Redes para ambientes Linux
+profhelder.pereira@fiap.com.br
+
 ![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/perm-desc.png)
 
 ---
-
-# Permissões Especias, Umask e Sudo:
-
-Para esta aula três pontos importantes serão avaliados:
-
-- O primeiro ponto é que além do permissionamento padrão existem algumas permissões especiais que podem ser aplicadas no acesso a pastas e diretórios;
-
-- O segundo ponto importante é como é executada a herança de permissões, já sabemos como manipular permissões usando o chmod mas como o sistema define qual permissão será aplicada quando eu criar uma pasta ou arquivo ?
-
-- O terceiro e ultimo é sobre um binário chamado sudo amplamente utilizado no gerenciamento de Sistemas Linux, veremos como esse binário fornece permissões especificas de administração e como configurá-lo devidamente;
-
-
-A base para estudos sobre permissionamentos especiais foi extraida de publicação [Permissões Especiais](https://pt.slideshare.net/bosontreinamentos/permisses-especiais-suid-sgid-sticky-linux) disponibilizada no slideshare, autoria de Fábio dos Reis da Bóson Treinamentos;
-
 
 ## Permissões Especiais:
 
@@ -242,6 +231,9 @@ Para este conteúdo utilizaremos o material online do Guia Foca Linux, [Capítul
 
 ## Material de Referência e Recomendações:
 
+A base para estudos sobre permissionamentos especiais foi extraida de publicação abaixo disponibilizada no slideshare, autoria de Fábio dos Reis da Bóson Treinamentos; 
+
+* [Permissões Especiais](https://pt.slideshare.net/bosontreinamentos/permisses-especiais-suid-sgid-sticky-linux);
 
 Ebook, Linux Command Line de William Shotts, Capitulo 11 – The Environment:
 

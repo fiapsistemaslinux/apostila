@@ -1,4 +1,9 @@
+##### Fiap - Soluções em Redes para ambientes Linux
+profhelder.pereira@fiap.com.br
+
 ![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/ssh-desc.png)
+
+---
 
 ## Acesso remoto entre servidores Linux
 

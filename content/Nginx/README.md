@@ -1,10 +1,11 @@
 ##### Fiap - Soluções em Redes para ambientes Linux
 profhelder.pereira@fiap.com.br
 
----
 ![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/nginx-desc.png)
 
-# Introdução ao NGINX
+---
+
+## Introdução ao NGINX
 
 O NGINX é um servidor web desenvolvido em 2004 conceitualmente como uma alternativa ao Apache, a proposta do nginx é a otimização de recursos de Memória e CPU e o que permite um aumento na quantidade máxima de requisições suportadas simultaneamente, o projeto possui uma boa [documentação](https://nginx.org/en/docs/) online, por ser extremamente performatico tem sido utilizado como solução default em diversas plataformas;
 
