@@ -1,8 +1,9 @@
 ##### Fiap - Soluções em Redes para ambientes Linux
 profhelder.pereira@fiap.com.br
 
----
 ![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/iptables-desc.png)
+
+---
 
 ## Conceitos importantes:
 
