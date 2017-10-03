@@ -1,5 +1,5 @@
 ![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/Postfix-logo.png)
-Postfix-logo.png; Public Domain; Fonte: [https://commons.wikimedia.org/wiki/File:Postfix-logo.png](https://commons.wikimedia.org/wiki/File:Postfix-logo.png)
+Fonte: [https://commons.wikimedia.org/wiki/File:Postfix_mailserver_flags_by_mimooh.svg](https://commons.wikimedia.org/wiki/File:Postfix_mailserver_flags_by_mimooh.svg), Autor: Mimooh
 
 # Postfix
 
