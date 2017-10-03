@@ -94,14 +94,6 @@ O kernel Linux é um desses componentes que juntos formam o sistema operacional.
 
 ---
 
-## Estrutura base de um sistema Linux
-
-Sistemas Linux possuem uma organização que define qual a composição de diretórios de da estrutura base de uma distribuição bem como qual a nomenclatura correta para estes diretórios, este sistema é chamado de FHS “File Hierarchy Standard” a estrutura proposta garante questões essenciais a evolução do sistema como por exemplo a compatibilidade entre diferentes plataformas, a estrutura FHS possui os seguintes diretórios:
-
-[[images/Linux-FHS.jpg]]
-
----
-
 ## Material de Referência e Recomendações:
 
 Documentário da TV Finlandesa de 2001 sobre o Sistema Operacional GNU/Linux:
