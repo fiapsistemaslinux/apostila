@@ -5,9 +5,7 @@ profhelder.pereira@fiap.com.br
 
 ---
 
-***Conceitos sobre serviços e Protocolos para Transferência de Mensagens;***
-
-## Conceito
+***Conceitos sobre serviços e Protocolos para Transferência de Mensagens:***
 
 **O que é um MTA?**
 
