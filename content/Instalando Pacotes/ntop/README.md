@@ -4,7 +4,7 @@
 
 O Ntopng é um sistema de monitoramento de tráfego de rede de código aberto escrito com base em PHP e Lua que fornece uma interface Web para monitoramento de rede em tempo real, esta ferramenta também será o nosso primeiro contato com a implementação de um serviço controlado via [System-D](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd);
 
-![alt tag](https://raw.githubusercontent.com/helcorin/linux/images/ntopng-1.png)
+![alt tag](https://github.com/helcorin/linux/raw/master/images/ntopng-1.png)
 
 Este laboratório destina-se a configurar o Ntopng no CentOS7;
 
@@ -120,7 +120,7 @@ telnet <IP-DA-INTERFACE-DE-REDE>:<PORTA TCP>
 
 Após configurar você pode acessar a interface da Web ntopng em um navegador da web acessando a URL "http: //<IP-DA-INTERFACE-DE-REDE>:3000" 
 
-![alt tag](https://raw.githubusercontent.com/helcorin/linux/images/ntopng-2.png)
+![alt tag](https://github.com/helcorin/linux/raw/master/images/ntopng-2.png)
 
 Utilize as informações de login abaixo:
 
