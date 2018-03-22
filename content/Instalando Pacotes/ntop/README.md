@@ -6,7 +6,7 @@ O Ntopng é um sistema de monitoramento de tráfego de rede de código aberto es
 
 ![alt tag](https://github.com/helcorin/linux/raw/master/images/ntopng-1.png)
 
-Este laboratório destina-se a configurar o Ntopng no CentOS7;
+Este laboratório destina-se a configurar o Ntopng no CentOS7, para executar essa configuração primeiro certifique-se de que a interface de rede do Vmware está em modo "NAT" e adicione um endereço ip ao servidor usando dhclient;
 
 ***Recursos do Ntopng:***
 
@@ -73,14 +73,14 @@ sudo systemctl status ntopng
 
 A interface Web do Ntopng escuta conexões na porta TCP 3000, dessa forma é preciso verificar se essa porta está aberta para conexões e caso não esteja adicionar uma regra de firewall para essa finalidade, essa troubleshoting pode ser feito de várias formas, abaixo um exemplo de uma abordagem possível para tentar solucionar o problema:
 
-1. Para verificar se a porta 3000 pode receber conexões execute uma chacagem usando netcat ou telnet:
+1. Para verificar se a porta 3000 pode receber conexões execute uma chacagem usando netcat ou telnet (Instale esses pacotes se for necessário);
 
 ```sh
 # Checando a conexão com netcat:
-nc -v -z <IP-DA-INTERFACE-DE-REDE> -p <PORTA TCP>
+nc -v <IP-DA-INTERFACE-DE-REDE> -p <PORTA TCP>
 
 # Checando a conexão com telnet:
-telnet <IP-DA-INTERFACE-DE-REDE>:<PORTA TCP>
+telnet <IP-DA-INTERFACE-DE-REDE> <PORTA TCP>
 ```
 
 2. Caso a conexão não esteja ativa verifique se o serviço do Ntop realmente criou o socket, faça essa verificação utilizando ss ou netstat:
@@ -110,10 +110,10 @@ sudo firewall-cmd --reload
 
 ```sh
 # Checando a conexão com netcat:
-nc -v -z <IP-DA-INTERFACE-DE-REDE> -p <PORTA TCP>
+nc -v <IP-DA-INTERFACE-DE-REDE> -p <PORTA TCP>
 
 # Checando a conexão com telnet:
-telnet <IP-DA-INTERFACE-DE-REDE>:<PORTA TCP>
+telnet <IP-DA-INTERFACE-DE-REDE> <PORTA TCP>
 ```
 
 ## Testando o Ntopng:
