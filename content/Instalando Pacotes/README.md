@@ -1,9 +1,7 @@
 ##### Fiap - Soluções em Redes para ambientes Linux
 profhelder.pereira@fiap.com.br
 
-![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/pacotes-desc.png)
-
----
+# Instalação de Pacotes
 
 ## Package Managers ( Gerenciadores de Pacotes ):
 
