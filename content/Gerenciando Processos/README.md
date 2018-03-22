@@ -1,7 +1,7 @@
 ##### Fiap - Soluções em Redes para ambientes Linux
 profhelder.pereira@fiap.com.br
 
-![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/processos-desc.png)
+![alt tag](https://raw.githubusercontent.com/helcorin/images/processos-desc.png)
 
 ---
 
@@ -12,7 +12,7 @@ O trecho abaixo contém uma boa definição sobre processos, retirado do materia
 <!--
 [[images/process.png]]
 -->
-![alt tag](https://raw.githubusercontent.com/wiki/fiap2trc/Linux/images/process.png)
+![alt tag](https://raw.githubusercontent.com/helcorin/images/process.png)
 
 ## Listando Processos 
 
