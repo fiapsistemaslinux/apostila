@@ -1,6 +1,6 @@
 ##### Fiap - Soluções em Redes para ambientes Linux
-fabio.cabrini@gmail.com
-profhelder.pereira@fiap.com.br
+- fabio.cabrini@gmail.com
+- profhelder.pereira@fiap.com.br
 
 # Soluçes em Redes para Sistemas Linux
 ---
@@ -14,6 +14,7 @@ profhelder.pereira@fiap.com.br
 - [1.7 Acesso Remoto](https://github.com/fiapsistemaslinux/apostila/tree/master/content/SSH)
 - [1.8 Backup e compressão de Dados](https://github.com/fiapsistemaslinux/apostila/tree/master/content/Backup)
 - [1.9 LVM](https://github.com/fiapsistemaslinux/apostila/tree/master/content/LVM)
+- [2.0 Apache](https://github.com/fiapsistemaslinux/apostila/tree/master/content/Apache)
 - [2.1 Firewall Iptables](https://github.com/fiapsistemaslinux/apostila/tree/master/content/Iptables)
 - [2.2 Bind9](https://github.com/fiapsistemaslinux/apostila/tree/master/content/Bind9)
 - [2.3 DHCP](https://github.com/fiapsistemaslinux/apostila/tree/master/content/DHCP)
