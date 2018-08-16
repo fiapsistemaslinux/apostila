@@ -3,7 +3,7 @@
 > Protocolos de Internet são parte da vida de um Administrador de Redes, sobretudo aqueles protocolos diretamente relacionados a serviços implementados dentro do ecosistema da sua empresa, neste capítulo aprofundaremos o estudo de alguns protoclos relacionados com servidores de aplicação e conteúdo como Apache e Nginx. 
 
 ---
-![alt tag](https://github.com/fiapsistemaslinux/apostila/raw/master/images/8vr5clu.jpg)
+![alt tag](https://github.com/fiapsistemaslinux/apostila/raw/master/pexels/8vr5clu.jpg)
 ---
 
 Para facilitar os estudos este conteudo foi divido com base nos principais protocolos e caracteristicas relacionadas a conexções e tráfego de dados, a ideia é prover uma boa base para aquela cerveja que citei a pouco...
