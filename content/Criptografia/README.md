@@ -1,6 +1,6 @@
 # Criptografia e Protocolos de Internet
 
-> Existem alguns pontos da área de segurança que são importantes para um desenvolvedor, principalmente quando se possui algum envolvimento com a arquitetura do produto o que aliás é uma caracteristica muito comum na cultura devops, não é que o desenvolvedor deva se tornar o responsável pelas definições de segurança ou algo próximo a isso, pessoalmente acredito que o necessário para uma boa integração é que os conhecimentos básicos sobre criptografia e protocolos estejam presentes, facilitando tomadas de decisão, atuação em _war rooms_ para resolução de problemas ou mesmo uma boa conversa regada a cerveja.
+> Protocolos de Internet são parte da vida de um Administrador de Redes, sobretudo aqueles protocolos diretamente relacionados a serviços implementados dentro do ecosistema da sua empresa, neste capítulo aprofundaremos o estudo de alguns protoclos relacionados com servidores de aplicação e conteúdo como Apache e Nginx. 
 
 ---
 ![alt tag](https://github.com/fiapsistemaslinux/apostila/raw/master/images/8vr5clu.jpg)
