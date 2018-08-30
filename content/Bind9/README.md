@@ -1,15 +1,7 @@
 ##### Fiap - Soluções em Redes para ambientes Linux
 profhelder.pereira@fiap.com.br
 
-![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/bind-desc.png)
-
 ---
-
-## Configurando DNS com bind9
-
-Nessa implementação utilizaremos uma arquitetura com dois servidores DNS master e slave e um terceiro equipamente executando cache de consultas:
-
-![alt tag](https://raw.githubusercontent.com/wiki/fiap2trc/services/images/arquitetura-DNS.png)
 
 ## Instalação do Serviço
 
