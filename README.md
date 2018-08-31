@@ -3,7 +3,6 @@
 - profhelder.pereira@fiap.com.br
 
 # Soluçes em Redes para Sistemas Linux
----
 
 - [1.0 Introdução](https://github.com/fiapsistemaslinux/apostila/tree/master/content/Intro)
 - [1.1 File Hierarchy Standard](https://github.com/fiapsistemaslinux/apostila/tree/master/content/FHS)
