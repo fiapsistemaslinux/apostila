@@ -16,15 +16,18 @@ Os alunos devem trabalhar em duplas e definir nesta primeira etapa o projeto bas
 
 ## Layout da Documentação:
 
+### Corpo da Documentação:
 Sua documentação deverá conter no mínimo as seguintes informações:
 
 * Sistema Operacional Linux Utilizado;
 * Solução de servidor de contepudo utilizada (Apache ou Nginx);
 * Solução de banco de dados utilizado (MySQL ou PostgreSQL);
 
-Itens opcionais:
+### Itens opcionais:
 * Solução de Firewall utilizada nas instnacias responsáveis por servir a aplicação (Iptables, FirewallD etc);
 * Configuração de HTTPS e criptografia no webserver responsável pela aplicação;
+
+### Questões que devem ser respondidas:
 
 Além das informações requeridas garantir que na documentação do projeto os seguintes itens sejam respondidos:
 
