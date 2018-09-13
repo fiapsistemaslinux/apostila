@@ -1,4 +1,4 @@
-# Arquitetura de um servidor de conteúdo usando Soluções Opensource
+# Arquitetura de um servidor de conteúdo usando Opensource
 
 **Objetivo:**
 
