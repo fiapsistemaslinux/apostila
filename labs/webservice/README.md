@@ -4,7 +4,9 @@
 
 Desenvolver o projeto de implementação para uma arquitetura que suporte a implementação de uma solução LAMP, ou seja: Linux + Apache (ou Nginx), + MySQL (ou PostgreSQL) + PHP
 
-**Formato:**
+---
+
+## Formato:##
 
 Os alunos devem trabalhar em duplas e definir nesta primeira etapa o projeto base a ser implementado em aula, considerar os seguinte fatores:
 
