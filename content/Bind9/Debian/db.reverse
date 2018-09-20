@@ -14,4 +14,4 @@ $TTL 24h ; Tempo padrao para todos os registros sem TTL
 ns1		IN	A	192.168.X.X
 ns2		IN	A	192.168.X.X
 1	IN	PTR	gateway.fiap.edu.br.
-128	IN	PTR	mail.fiap.edu.br.
+X	IN	PTR	mail.fiap.edu.br.
