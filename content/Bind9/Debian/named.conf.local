@@ -1,22 +1,21 @@
 // Fiap - Soluções em Redes para ambientes Linux
-// github.com/2TRC2/DNS
 
 // Arquivo de configuração de zonas:
 
 // fiap.com.br - Arquivo master de configuração da zona fiap.com.br
-// Apartir do file "db.fiap.com.br" serão declarados os registros de DNS do dominio fiap.com.br
+// Apartir do file "db.fiap.edu.br" serão declarados os registros de DNS do dominio fiap.com.br
 
-zone "fiap.com.br" {
+zone "fiap.edu.br" {
         type master;
-        file "/var/cache/bind/db.fiap.com.br";
+        file "/var/cache/bind/db.fiap.edu.br";
 	notify yes;
-        also-notify { 192.168.218.129; };
+        also-notify { 192.168.X.X; };
 };
 
 // Arquivo de configuração dos ponteiros reversos da zona
 
-zone "1.168.192.in-addr.arpa" {
+zone "X.168.192.in-addr.arpa" {
         type master;
-        file "/var/cache/bind/db.218.168.192";
+        file "/var/cache/bind/db.reverse";
 	allow-query { any; }; 
 };
