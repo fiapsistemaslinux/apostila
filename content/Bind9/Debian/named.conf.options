@@ -15,11 +15,11 @@ options {
 	// };
 
 	// Restringir quem podera usar seu DNS
-	allow-query { 192.168.218.0/24; 127.0.0.1; }; 
-	allow-recursion { 192.168.218.0/24; 127.0.0.1; }; 
+	allow-query { 192.168.X.0/24; 127.0.0.1; }; 
+	allow-recursion { 192.168.X.0/24; 127.0.0.1; }; 
 
 	// Permitir transferencia de zona para o DNS SLAVE
-        allow-transfer { 127.0.0.1; 192.168.218.129; };
+        allow-transfer { 127.0.0.1; 192.168.X.X; };
 
 	//========================================================================
 	// If BIND logs error messages about the root key being expired,
