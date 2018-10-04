@@ -1,7 +1,7 @@
 ##### Fiap - Soluções em Redes para ambientes Linux
 profhelder.pereira@fiap.com.br
 
-![alt tag](https://raw.githubusercontent.com/wiki/helcorin/fiapLinux/images/postfix-desc.png)
+![alt tag](![alt tag](https://github.com/fiapsistemaslinux/apostila/raw/master/images/postfix-0.png)
 
 ---
 
@@ -22,7 +22,7 @@ e-mails para outros endereços. Exemplos de MDA: Procmail, Fetchmail, Binmail, D
 
 O modelo abaixo demonstra o relacionamento entre cada um desses elementos:
 
-![alt tag](https://raw.githubusercontent.com/wiki/fiap2trc/services/images/650px-MTA-MDA-MUA_relationship.svg.png)
+![alt tag](![alt tag](https://github.com/fiapsistemaslinux/apostila/raw/master/images/postfix-1.png)
 
 ---
 
