@@ -57,9 +57,10 @@ def setserialinf ():
 
 def setdomaindns ():
     global fqdn
-
-    import socket
-    fqdn = socket.getfqdn()
+    fqdn = "fiap.edu.br"
+    
+    #import socket
+    #fqdn = socket.getfqdn()
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 DNSFILESPATH = os.path.dirname(os.path.abspath(__file__))+'/files/dns'
