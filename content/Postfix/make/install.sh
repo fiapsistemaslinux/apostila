@@ -15,7 +15,7 @@ apt install bind9 postfix procmail bsd-mailx telnet rsync -y
 configureservices () {
 clear && echo "Sincronizando arquivos de DNS e do Postfix gerados via template" && sleep 2
 rsync -av $FILESPATH/dns/ /etc/bind/
-rsync -av $FILESPATH/postfix/ /etc/postfix/
+#rsync -av $FILESPATH/postfix/ /etc/postfix/
 sleep 1
 }
 
