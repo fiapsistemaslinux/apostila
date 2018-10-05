@@ -111,6 +111,12 @@ postconf -e "myorigin = /etc/mailname"
 postconf -e "myhostname = $(hostname -f)"
 ```
 
+Libere o uso da porta 25 para testes iniciais de comunicação com o MTA:
+
+```sh
+sudo ufw allow Postfix
+```
+
 Após finalizar a configuração faça o reload do psotfix:
 
 ```sh
@@ -127,7 +133,7 @@ Após finalizar a configuração faça o reload do psotfix:
 Para nosso primeiro teste de envio utilizaremos o cliente mail conforme abaixo:
 
 ```sh
-echo "Teste de envio" | mail -s "Teste" suporte@$(hostname -d)
+echo "Teste de envio" | mail -s "Teste" aluno@$(hostname -d)
 ```
 
 ---
@@ -173,7 +179,7 @@ HELO mail.fiap.edu.br
 250 mail.fiap.edu.br
 MAIL FROM: <root@fiap.edu.br>
 250 2.1.0 Ok
-RCPT TO: <suporte@fiap.edu.br>
+RCPT TO: <aluno@fiap.edu.br>
 250 2.1.5 Ok
 DATA
 354 End data with <CR><LF>.<CR><LF>
@@ -233,12 +239,12 @@ Reinicie o Postifix para aplicar as novas configurações:
 Na configuração anterior redefinimos o padrão para caixa de entrada para a home de usuário, para testarmos esse modelo será necessário utilizar o maildirmake para criação da caixa de entrada, neste exemplo tanto para o root como para o usuário suporte:
 
 ```sh
-# maildirmake /home/suporte/Maildir
-# maildirmake /home/suporte/Maildir/.Enviados
-# maildirmake /home/suporte/Maildir/.Rascunhos
-# maildirmake /home/suporte/Maildir/.Lixeira
-# maildirmake /home/suporte/Maildir/.Spam
-# chown -R suporte: /home/suporte
+# maildirmake /home/aluno/Maildir
+# maildirmake /home/aluno/Maildir/.Enviados
+# maildirmake /home/aluno/Maildir/.Rascunhos
+# maildirmake /home/aluno/Maildir/.Lixeira
+# maildirmake /home/aluno/Maildir/.Spam
+# chown -R suporte: /home/aluno
 ```
 
 Para terminar a configuração, reinicie os serviços abaixo:
