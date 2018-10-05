@@ -4,8 +4,8 @@ zone {{ domain }} {
         notify yes;
 };
 
-zone "{{ reverse }}.in-addr.arpa" {
+zone "{{ rvfile }}.in-addr.arpa" {
         type master;
-        file "/etc/bind/db.{{ reverse }}";
+        file "/etc/bind/db.{{ rvfile }}";
         allow-query { any; };
 };
