@@ -81,7 +81,7 @@ server {
 
         listen 80;
 
-        root /usr/share/nginx/fiap.io/public;
+        root /usr/share/nginx/fiapdev/public;
         index index.html index.htm;
 
         server_name fiap.io;
@@ -98,7 +98,7 @@ EOF
 3. Crie o diretório conforme indicado na instrução "root" do arquivo de configuração:
 
 ```sh
-mkdir -p /usr/share/nginx/fiap.io/public/
+mkdir -p /usr/share/nginx/fiapdev/public/
 ```
 
 4. Para este teste escolha um dos templates [a partir desta página](https://w3cssthemes.com/), escolha a opção **free** e em seguida faça o Download e descompactação do arquivo no diretório "/usr/share/nginx/fiap.io/public/" remova qualquer subpasta no processo.
