@@ -128,7 +128,7 @@ EOF
 cat <<EOF | sudo tee /etc/nginx/conf.d/pizzapage.conf
 server {
 
-        root /usr/share/nginx/fiapdev/public/W3CSS-Gourmet-Catering-master;
+        root /usr/share/nginx/fiapdev/public/W3CSS-Pizza-Restaurant-master;
         index index.html index.htm;
 
         server_name ${DOMAIN_2}.fiapdev.com;
