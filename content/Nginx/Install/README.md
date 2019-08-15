@@ -80,7 +80,7 @@ wget https://github.com/W3CSSThemes/W3CSS-Cafe/archive/master.zip \
 && sudo unzip master.zip -d /usr/share/nginx/fiapdev/public \
 && rm -f master.zip
 #
-wget https://github.com/W3CSSThemes/W3CSS-Gourmet-Catering/archive/master.zip \
+wget https://github.com/W3CSSThemes/W3CSS-Pizza-Restaurant/archive/master.zip \
 && sudo unzip master.zip -d /usr/share/nginx/fiapdev/public \
 && rm -f master.zip
 #
@@ -142,9 +142,17 @@ server {
 EOF
 ```
 
-6. Carregue as configurações novas no nginx:
+6. Após finzalizar a configuração é possível validar o carregamento utilizando a flag "-t" (test configuration and exit) do nginx:
 
 ```sh
+sudo nginx -t
+```
+
+Após a validação carregue as novas configurações:
+
+```sh
+sudo nginx -s reload
+# ou
 sudo systemctl reload nginx
 ```
 
