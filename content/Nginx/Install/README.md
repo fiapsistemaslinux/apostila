@@ -21,7 +21,7 @@ Por exemplo, no processo de instaçaão do nginx utilize a seção: [Installing 
 Em ambos os casos após a instalação o daemon será entregue no systemD, ao finalizar o processo inicie o nginx e verifique o conteúdo default exibido na página 80:
 
 ```sh
-systemctl start nginx
+sudo systemctl start nginx
 ```
 
 O servidor exibirá uma página estática similar ao modelo abaixo:
@@ -32,7 +32,7 @@ O servidor exibirá uma página estática similar ao modelo abaixo:
 Ao final do processo instale algumas ferramentas auxiliares para os testes que seguirão:
 
 ```sh
-yum install epel-release wget vim zip zip unzip -y
+sudo yum install epel-release wget vim zip zip unzip -y
 ```
 
 ---
@@ -70,25 +70,27 @@ Este é um [exemplo do arquivo default.conf](https://github.com/fiapsistemaslinu
 1. Crie o diretório conforme indicado na instrução "root" do arquivo de configuração:
 
 ```sh
-mkdir -p /usr/share/nginx/fiapdev/public
+sudo mkdir -p /usr/share/nginx/fiapdev/public
 ```
 
 2. Para este teste utilizaremos templates criados [a partir desta página](https://w3cssthemes.com/):
 
 ```sh
 wget https://github.com/W3CSSThemes/W3CSS-Cafe/archive/master.zip \
-&& unzip master.zip -d /usr/share/nginx/fiapdev/public \
+&& sudo unzip master.zip -d /usr/share/nginx/fiapdev/public \
 && rm -f master.zip
 #
 wget https://github.com/W3CSSThemes/W3CSS-Gourmet-Catering/archive/master.zip \
-&& unzip master.zip -d /usr/share/nginx/fiapdev/public \
+&& sudo unzip master.zip -d /usr/share/nginx/fiapdev/public \
 && rm -f master.zip
+#
+ls -l /usr/share/nginx/fiapdev/public/*
 ```
 
 3. Acesse o diretório de configuração do nginx e substitua o arquivo default:
 
 ```sh
-mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.example
+sudo mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.example
 ```
 
 4. Antes de iniciarmos a configuração do mapeamento de conteúdo no nginx defina quais os nomes de domínio respectivos para cada página:
@@ -97,7 +99,7 @@ mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.example
 
 ```sh
 export DOMAIN_1='coffepage'
-export DOMAIN-2='hotpizza'
+export DOMAIN_2='hotpizza'
 ```
 
 *A ideia de definir variaveis é unicamente utilizada para agilizar o processo de configuração*
@@ -138,6 +140,7 @@ server {
         }
 }
 EOF
+```
 
 6. Carregue as configurações novas no nginx:
 
@@ -154,8 +157,8 @@ Se estiver em uma núvem AWS proceda da seguinte forma:
 ```sh
 export PUBLIC_IP=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
 #
-curl -v -H 'Host: ${DOMAIN_1}.fiapdev.com' http://${PUBLIC_IP}
-curl -v -H 'Host: ${DOMAIN_2}.fiapdev.com' http://${PUBLIC_IP}
+curl -v -H 'Host: '"$DOMAIN_1"'.fiapdev.com' http://${PUBLIC_IP}
+curl -v -H 'Host: '"$DOMAIN_2"'.fiapdev.com' http://${PUBLIC_IP}
 ```
 
 Em ambientes virtualizados você provavelmente utilizará o endereço ip da maquina virtual, neste cenário vocẽ pode utilizar algo similar ao comando abaixo:
@@ -163,8 +166,8 @@ Em ambientes virtualizados você provavelmente utilizará o endereço ip da maqu
 ```sh
 PUBLIC_IP=$(hostname -I | awk '{print $1}')
 #
-curl -v -H 'Host: ${DOMAIN_1}.fiapdev.com' http://${PUBLIC_IP}
-curl -v -H 'Host: ${DOMAIN_2}.fiapdev.com' http://${PUBLIC_IP}
+curl -v -H 'Host: '"$DOMAIN_1"'.fiapdev.com' http://${PUBLIC_IP}}
+curl -v -H 'Host: '"$DOMAIN_2"'.fiapdev.com' http://${PUBLIC_IP}
 ```
 ---
 
