@@ -93,7 +93,7 @@ mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.example
 
 4. Antes de iniciarmos a configuração do mapeamento de conteúdo no nginx defina quais os nomes de domínio respectivos para cada página:
 
-# Dica: Para a primeira página sugiro algo relacionado a café e para a segunda página sugiro algo relacionado a pizzas :p
+**Dica: Para a primeira página sugiro algo relacionado a café e para a segunda página sugiro algo relacionado a pizzas :p
 
 ```sh
 export DOMAIN_1='coffepage'
