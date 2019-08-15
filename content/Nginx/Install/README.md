@@ -79,17 +79,15 @@ mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.example
 cat <<EOF | sudo tee /etc/nginx/conf.d/static.conf
 server {
 
-        listen 80;
-
         root /usr/share/nginx/fiapdev/public;
         index index.html index.htm;
 
-        server_name fiap.io;
+        server_name page.fiapdev.com;
 
         location / {
 
         default_type "text/html";
-        try_files $uri.html $uri $uri/ =404;
+        try_files \$uri.html \$uri \$uri/ =404;
         }
 }
 EOF
