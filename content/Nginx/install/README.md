@@ -18,6 +18,26 @@ Uma boa dica sobre o proceso de instalação é que em muitos casos utilizar o r
 
 Por exemplo, no processo de instaçaão do nginx utilize a seção: [Installing a Prebuilt CentOS/RHEL Package from the Official NGINX Repository](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-a-prebuilt-centos-rhel-package-from-the-official-nginx-repository)
 
+Neste exemplo a instalação será feita utilizando o Centos na versão 7 e um repositório oficial do Nginx:
+
+```sh
+cat <<EOF | sudo tee /etc/yum.repos.d/nginx.repo
+[nginx]
+name=nginx repo
+baseurl=https://nginx.org/packages/mainline/centos/7/$basearch/
+gpgcheck=0
+enabled=1
+EOF
+```
+
+Em seguida atualize o repositório e faça a instalação do Nginx:
+
+```sh
+sudo yum update
+sudo yum install nginx -y
+```
+
+
 Em ambos os casos após a instalação o daemon será entregue no systemD, ao finalizar o processo inicie o nginx e verifique o conteúdo default exibido na página 80:
 
 ```sh
@@ -177,6 +197,53 @@ PUBLIC_IP=$(hostname -I | awk '{print $1}')
 curl -v -H 'Host: '"$DOMAIN_1"'.fiapdev.com' http://${PUBLIC_IP}}
 curl -v -H 'Host: '"$DOMAIN_2"'.fiapdev.com' http://${PUBLIC_IP}
 ```
+---
+
+## Deploy de certificado HTTPS com CA válida:
+
+![alt tag](https://github.com/fiapsistemaslinux/apostila/raw/master/images/tls-1.png)
+
+
+Certificados criptografados são utilizados na criptografia da conexão entre clientes e servidores de conteúdo, a segurança em sua aplicação se da tanto pelo uso de criptografia no tráfego quanto pela confirmação de identidade, esta segunda parte está diretamente ligada ao uso de uma CA, uma autoridade certificadora válida responsável pela checagem e confirmação dos dados usados na criação do certificado bem como sua origem.
+
+O Lets Encrypt é um projeto gratuito que fornece um meio para instalação de um certificado usando uma CA válida sem que seja necessário atuar a partir de uma autoridade certificadora.
+
+### Parte 1 — Instalando o cliente do Let's Encrypt:
+
+Instale o Certbot uma solução utilizada para configuração automática de certificados no Nginx usando o Lets Encrypt como uma CA.
+
+```sh
+sudo yum install certbot-nginx
+```
+
+### Parte 2 — Configurando o Certificado:
+
+Com base na configuração anterior faça a solicitação do certificado:
+
+```sh
+sudo certbot --nginx -d ${DOMAIN_1}.fiapdev.com -d ${DOMAIN_2}.fiapdev.com --staging
+```
+
+> O Certbot pode configurar automaticamente o SSL para o Nginx, mas ele precisa ser capaz de encontrar o bloco de servidor correto na sua configuração. Ele faz isso procurando o parametro *server_name* que corresponde ao domínio para o qual você está solicitando um certificado.
+
+***Importante***:
+
+- Para que o teste funcione é necessário que o dominio especificado seja valido e por tanto já tenha DNS totalmente configurado;
+
+- No processo de instalação você será questionado em um processo passo-a-passo sobre opções de configurações do certificado, além do email você deverá escolher entre habilitar http e https ou o redirecionamento automático de páginas para https, geralmente a opção mais segura.
+
+- Nesta instalação utilizamos a opção "--staging" responsável pela configuração do certificado utilizando uma C.A. de testes ou seja inválida em relação a checagem feita pelo navegador, em um ambiente de produção a mesma configuração pode ser executada sem este parâmetro para criar um certificado válido, nestes casos é possível verificar o status de sua conexão/certificado a partir do [sslabs](https://www.ssllabs.com/ssltest);
+
+---
+
+### Material de Referência:
+
+Este laboratório foi criado com base em um tutorial publicdo por [Mitchell Anicas]
+
+- [How To Secure Nginx with Let's Encrypt on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-centos-7)
+
+- [Documentação Oficial do Nginx](https://docs.nginx.com/nginx/admin-guide/)
+
 ---
 
 **Free Software, Hell Yeah!**
