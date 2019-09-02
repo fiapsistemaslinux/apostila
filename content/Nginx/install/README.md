@@ -206,6 +206,10 @@ curl -v -H 'Host: '"$DOMAIN_2"'.fiapdev.com' http://${PUBLIC_IP}
 
 Certificados criptografados são utilizados na criptografia da conexão entre clientes e servidores de conteúdo, a segurança em sua aplicação se da tanto pelo uso de criptografia no tráfego quanto pela confirmação de identidade, esta segunda parte está diretamente ligada ao uso de uma CA, uma autoridade certificadora válida responsável pela checagem e confirmação dos dados usados na criação do certificado bem como sua origem.
 
+## Lets Encrypt
+
+![alt tag](https://github.com/fiapsistemaslinux/apostila/raw/master/images/nginx-005.png)
+
 O Lets Encrypt é um projeto gratuito que fornece um meio para instalação de um certificado usando uma CA válida sem que seja necessário atuar a partir de uma autoridade certificadora.
 
 ### Parte 1 — Instalando o cliente do Let's Encrypt:
