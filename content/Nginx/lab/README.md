@@ -145,10 +145,11 @@ server {
 EOF
 ```
 
-8. Habilite o Server Name do MediaWiki:
+8. Habilite o Server Name do MediaWiki e desabilite a página default removendo o link simbólico do Virtual Server Default do diretório /etc/nginx/sites-enabled:
 
 ```sh
 sudo ln -s /etc/nginx/sites-available/mediawiki /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo nginx -s reload
 ```
@@ -157,12 +158,6 @@ sudo nginx -s reload
 
 ```sh
 sudo systemctl restart nginx.service
-```
-
-Ao final da instalação você pode desabilitar a página default do Projeto removendo o link simbólico do Virtual Server Default do diretório /etc/nginx/sites-enabled:
-
-```sh
-sudo rm /etc/nginx/sites-enabled/default
 ```
 
 **Extras:**
