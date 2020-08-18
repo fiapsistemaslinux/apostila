@@ -124,14 +124,15 @@ Vamos começar pela prova de conceito sobre as politicas de firewall citadas a p
 
 ```sh
 # iptables -t filter -S
-# ping 127.0.0.1
+# iptables -t filter -nL
+# ping 127.0.0.1 -c 3
 ```
 
  2 - Em seguida modifique a policy da chain de entrada para o padrão restritivo e repita o teste:
 
 ```sh
-# iptables -t filter -P INPUT DROP
-# iptables -t filter -S
+# iptables -A INPUT -p icmp -j REJECT
+# iptables -t filter -nL
 # ping 127.0.0.1
 ```
 
@@ -142,27 +143,27 @@ Vamos começar pela prova de conceito sobre as politicas de firewall citadas a p
  3 - Tendo funcionado o bloqueio anteior vamos a liberção de acesso:
 
 ```sh
-# iptables -t filter -A INPUT -s 0/0 -d 127.0.0.1 -j ACCEPT
+# iptables -I INPUT -p icmp -d 127.0.0.1 -j ACCEPT 
 # ping 127.0.0.1
-# iptables -t filter -S
 # iptables -t filter -nL
 ```
 
-> No exemplo acima criamos uma regra de liberação dentro da chain INPUT da tabela filter, um conceito interessante útil para se aprender iptables ( conceito aprendido com a Gabriela Dias da 4Linux ) é que se você consegue ler uma regra por extenso como se fosse um texto então você realmente a entende, se aplicarmos esse lógica a regra anteior teriamos algo mais ou menos assim:
+> No exemplo acima criamos uma regra de liberação dentro da chain INPUT da tabela filter utilizando a opção "-I" para fazer um insert no topo da tabela ao invés de um Append (opção -A).
 
-> **Tudo que entrar na tabela filter, de qualquer origem com destino ao endereço 127.0.0.1 será aceito**
+Um conceito interessante útil para se aprender iptables (conceito aprendido com a Gabriela Dias) é: "Se você consegue ler uma regra por extenso como se fosse um texto então você realmente a entende", se aplicarmos esse lógica a regra anteior teriamos algo mais ou menos assim:
+
+> **Tudo que entrar na tabela filter, de qualquer origem com protocolo icmpcom destino ao endereço 127.0.0.1 será aceito**
 
  4 - Para comprovar a regra descrita acima teste o ping para algum outro endereço que não seja o 127.0.0.1:
 
 ```sh
-# ping 192.168.1.1
 # ping 8.8.8.8
 ```
 
  5 - E se quisessemos liberar a entrada e pacotes para qualquer endereço?
 
 ```sh
-# iptables -t filter -A INPUT -s 0/0 -d 0/0 -j ACCEPT
+# iptables -t filter -A INPUT -p icmp -s 0/0 -d 0/0 -j ACCEPT
 # iptables -t filter -nL
 # ping 8.8.8.8
 # ping 127.0.0.1
@@ -172,7 +173,7 @@ Vamos começar pela prova de conceito sobre as politicas de firewall citadas a p
 
 ```sh
 # iptables -t filter -nL --line-numbers
-# iptables -t filter -D INPUT 1
+# iptables -t filter -D INPUT <NUM_DA_REGRA>
 # iptables -t filter -nL
 ```
 
